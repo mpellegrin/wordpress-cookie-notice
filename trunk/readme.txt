@@ -3,8 +3,8 @@ Contributors: dfactory
 Donate link: http://www.dfactory.eu/
 Tags: cookie, cookies, notice, notification, notify, cookie, cookie compliance, cookie law, eu cookie, privacy, privacy directive, consent, Bootstrap
 Requires at least: 3.3
-Tested up to: 4.2.3
-Stable tag: 1.2.32
+Tested up to: 4.3.1
+Stable tag: 1.2.33
 License: MIT License
 License URI: http://opensource.org/licenses/MIT
 
@@ -53,6 +53,7 @@ Feel free to contribute to the source code on the [dFactory GitHub Repository](h
 * Finnish - by [Daniel Storgards](www.danielstorgards.com)
 * French - by [Laura Orsal](http://www.traductrice-independante.fr)
 * German - by Alex Ernst
+* Greek - by Elias Stefanidis
 * Hebrew - by [Ahrale Shrem](http://atar4u.com/)
 * Hungarian - by [Surbma](http://surbma.hu)
 * Italian - by [Luca](http://www.lucacicca.it)
@@ -77,6 +78,9 @@ No questions yet.
 1. screenshot-1.png
 
 == Changelog ==
+
+= 1.2.33 =
+* New: Greek translation thanks to Elias Stefanidis
 
 = 1.2.32 =
 * Fix: Accept cookie button hidden on acceptance instead of the cookie message container
@@ -209,5 +213,5 @@ Initial release
 
 == Upgrade Notice ==
 
-= 1.2.32 =
-* Fix: Accept cookie button hidden on acceptance instead of the cookie message container
+= 1.2.33 =
+* New: Greek translation thanks to Elias Stefanidis
