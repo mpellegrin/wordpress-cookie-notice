@@ -2,7 +2,7 @@
 /*
 Plugin Name: Cookie Notice
 Description: Cookie Notice allows you to elegantly inform users that your site uses cookies and to comply with the EU cookie law regulations.
-Version: 1.2.36
+Version: 1.2.36.1
 Author: dFactory
 Author URI: http://www.dfactory.eu/
 Plugin URI: http://www.dfactory.eu/plugins/cookie-notice/
@@ -28,13 +28,13 @@ if ( ! defined( 'ABSPATH' ) )
 // set plugin instance
 $cookie_notice = new Cookie_Notice();
 
-include_once( plugin_dir_path( __FILE__ ) . 'includes/upgrade.php' );
+include_once( plugin_dir_path( __FILE__ ) . 'includes/update.php' );
 
 /**
  * Cookie Notice class.
  *
  * @class Cookie_Notice
- * @version	1.2.36
+ * @version	1.2.36.1
  */
 class Cookie_Notice {
 
@@ -70,7 +70,7 @@ class Cookie_Notice {
 			'translate'						=> true,
 			'deactivation_delete'			=> 'no'
 		),
-		'version'							=> '1.2.36'
+		'version'							=> '1.2.36.1'
 	);
 	private $positions 			= array();
 	private $styles 			= array();

@@ -4,7 +4,7 @@ Donate link: http://www.dfactory.eu/
 Tags: cookie, cookies, notice, notification, notify, cookie, cookie compliance, cookie law, eu cookie, privacy, privacy directive, consent, Bootstrap
 Requires at least: 3.3
 Tested up to: 4.6
-Stable tag: 1.2.36
+Stable tag: 1.2.36.1
 License: MIT License
 License URI: http://opensource.org/licenses/MIT
 
@@ -59,6 +59,9 @@ No questions yet.
 1. screenshot-1.png
 
 == Changelog ==
+
+= 1.2.36.1 =
+* Fix: Repository upload issue with 1.2.36
 
 = 1.2.36 =
 * Fix: String translation support for WMPL 3.2+ 
@@ -208,6 +211,5 @@ Initial release
 
 == Upgrade Notice ==
 
-= 1.2.36 =
-* Fix: String translation support for WMPL 3.2+ 
-* Fix: Global var possible conflict with other plugins
+= 1.2.36.1 =
+* Fix: Repository upload issue with 1.2.36
