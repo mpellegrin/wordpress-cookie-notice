@@ -2,7 +2,7 @@
 /*
 Plugin Name: Cookie Notice
 Description: Cookie Notice allows you to elegantly inform users that your site uses cookies and to comply with the EU cookie law GDPR regulations.
-Version: 1.2.47
+Version: 1.2.48
 Author: dFactory
 Author URI: http://www.dfactory.eu/
 Plugin URI: http://www.dfactory.eu/plugins/cookie-notice/
@@ -34,7 +34,7 @@ include_once( plugin_dir_path( __FILE__ ) . 'includes/upgrade.php' );
  * Cookie Notice class.
  *
  * @class Cookie_Notice
- * @version	1.2.47
+ * @version	1.2.48
  */
 class Cookie_Notice {
 
@@ -81,7 +81,7 @@ class Cookie_Notice {
 			'update_notice'			=> true,
 			'update_delay_date'		=> 0
 		),
-		'version'	=> '1.2.47'
+		'version'	=> '1.2.48'
 	);
 	private $positions = array();
 	private $styles = array();
@@ -457,12 +457,9 @@ class Cookie_Notice {
 	 * @return string
 	 */
 	public function cookies_policy_link_shortcode( $args, $content ) {
-		// get privacy policy options
-		$options = $this->options['general']['see_more_opt'];
-
 		// active message link position?
 		if ( $this->options['general']['see_more'] === 'yes' && $this->options['general']['link_position'] === 'message' )
-			return '<a href="' . ( $options['link_type'] === 'custom' ? $options['link'] : get_permalink( $options['id'] ) ) . '" target="' . $options['link_target'] . '" id="cn-more-info" class="cn-privacy-policy-link cn-link">' . esc_html( $options['text'] !== '' ? $options['text'] : '&#x279c;' ) . '</a>';
+			return '<a href="' . ( $this->options['general']['see_more_opt']['link_type'] === 'custom' ? $this->options['general']['see_more_opt']['link'] : get_permalink( $this->options['general']['see_more_opt']['id'] ) ) . '" target="' . $this->options['general']['link_target'] . '" id="cn-more-info" class="cn-privacy-policy-link cn-link">' . esc_html( $this->options['general']['see_more_opt']['text'] !== '' ? $this->options['general']['see_more_opt']['text'] : '&#x279c;' ) . '</a>';
 
 		return '';
 	}
@@ -1102,9 +1099,9 @@ class Cookie_Notice {
 			) );
 
 			if ( $options['see_more'] === 'yes' && $options['link_position'] === 'message' )
-				$options['message_text'] = nl2br( do_shortcode( esc_html( $options['message_text'] ) ) );
+				$options['message_text'] = do_shortcode( wp_kses_post( $options['message_text'] ) );
 			else
-				$options['message_text'] = nl2br( esc_html( $options['message_text'] ) );
+				$options['message_text'] = wp_kses_post( $options['message_text'] );
 
 			$options['css_class'] = esc_attr( $options['css_class'] );
 

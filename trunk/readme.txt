@@ -5,7 +5,7 @@ Tags: gdpr, cookie, cookies, notice, notification, notify, cookie, cookie compli
 Requires at least: 3.3
 Requires PHP: 5.2.4
 Tested up to: 5.3
-Stable tag: 1.2.47
+Stable tag: 1.2.48
 License: MIT License
 License URI: http://opensource.org/licenses/MIT
 
@@ -65,6 +65,10 @@ No questions yet.
 1. screenshot-1.png
 
 == Changelog ==
+
+= 1.2.48 =
+* Fix: HTML tags stripped from cookie message
+* Fix: Link target not accepted in inline privacy link
 
 = 1.2.47 =
 * New: Option to select the privacy policy link position
@@ -267,6 +271,6 @@ Initial release
 
 == Upgrade Notice ==
 
-= 1.2.47 =
-* New: Option to select the privacy policy link position
-* Tweak: Do not relad the page on refuse button click
+= 1.2.48 =
+* Fix: HTML tags stripped from cookie message
+* Fix: Link target not accepted in inline privacy link
